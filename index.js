@@ -76,7 +76,7 @@ function morseNumsToFakeBinary(str) {
   return res;
 }
 
-function binaryToEmoji(num, emoji_zero, emoji_one, separator) {
+function fakeBinaryToEmoji(num, emoji_zero, emoji_one, separator) {
   res = " ";
   for (let i = 0; i < num.length; i++) {
     const n = num[i];
@@ -103,7 +103,7 @@ for (let i = 0; i < str.length; i++) {
       const morseNum = integerToMorseNum(`${index}`);
       const fakeBinary = morseNumsToFakeBinary(morseNum);
       output += fakeBinary;
-      emoji_output += binaryToEmoji(fakeBinary, emoji_zero, emoji_one, separator);
+      emoji_output += fakeBinaryToEmoji(fakeBinary, emoji_zero, emoji_one, separator);
     }
   }
 }
